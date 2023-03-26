@@ -16,7 +16,7 @@ function App() {
     <>
       <div class="form-group">
         <label for="username">Username</label>
-        <input type="text" value={username} class="form-control" id="InputUsername" placeholder="Enter username" onChange={(e) => setUsername(e.target.value)} />
+        <input type="text" value={username} class="form-control" id="InputUsername" placeholder="Enter username" onChange={ (e) => setUsername(e.target.value)} />
       </div>
       <div class="form-group">
         <label for="Password1">Password</label>
@@ -26,6 +26,14 @@ function App() {
         <button type="button" class="btn btn-primary mt-3" onClick={() => setStep(1)}>Submit</button>
         <button type="reset" class="btn btn-danger mt-3" onClick={handleReset}>Reset</button>
       </div>
+      
+      {step === 1 && (
+      <div className="card mt-5">
+        <div className="card-body ">
+          <h4>Username : {username} </h4>
+          <h4>Password : {password}</h4>
+        </div>
+      </div>)}
     </>
   );
 }
