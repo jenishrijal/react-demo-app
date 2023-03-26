@@ -22,6 +22,10 @@ function App() {
         <label for="Password1">Password</label>
         <input type="password" value={password} class="form-control" id="InputPassword1" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
       </div>
+      <div class="clickbtn">
+        <button type="button" class="btn btn-primary mt-3" onClick={() => setStep(1)}>Submit</button>
+        <button type="reset" class="btn btn-danger mt-3" onClick={handleReset}>Reset</button>
+      </div>
     </>
   );
 }
